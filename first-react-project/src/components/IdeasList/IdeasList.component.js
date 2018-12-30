@@ -64,11 +64,13 @@ class IdeasList extends Component {
                                 <div>
                                     <div className='members-list__heading'>Members</div>
                                     <ul>
-                                        { idea.members.map((member) => (
-                                            member.role !== 'voter' ? (<li key={member.email}>
-                                            { member.name } { ['leader', 'mentor'].indexOf(member.role) > -1 ? (<span className='member-role'>({ member.role })</span>) : '' }
-                                            </li>) : ''
-                                        )) }
+                                        { 
+                                            idea.members.map((member) => (
+                                                <li key={member.email}>
+                                                { member.name }
+                                                </li>
+                                            ))
+                                        }
                                     </ul>
                                     </div>           
                                 </div>

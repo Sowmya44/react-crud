@@ -1,24 +1,9 @@
-
-.idea-container .idea-body {
-    flex: 2;
-}
-
 .idea-container {
     border-bottom: 3px dotted;
     margin-bottom: 10px;
 }
 
-.idea-join {
-    display: flex;
-    align-items: center;
-}
-
-.idea-join button {
-    height: 40px;
-}
-
 .members-list {
-    flex: 0 100%;
     border-left: 1px dotted #c5c5c5;
     padding-left: 15px;
     margin-right: 20px;
@@ -27,7 +12,6 @@
 .members-list__heading {
     background: #aeaeae;
     color: #333;
-    text-align: center;
     padding: 4.5px;
 }
 
@@ -37,6 +21,5 @@
 
 .members-list ul li {
     list-style: none;
-    text-align: center;
     padding: 4px;
 }
