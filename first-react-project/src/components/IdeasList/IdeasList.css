@@ -1,0 +1,25 @@
+.idea-container {
+    border-bottom: 3px dotted;
+    margin-bottom: 10px;
+}
+
+.members-list {
+    border-left: 1px dotted #c5c5c5;
+    padding-left: 15px;
+    margin-right: 20px;
+}
+
+.members-list__heading {
+    background: #aeaeae;
+    color: #333;
+    padding: 4.5px;
+}
+
+.members-list ul {
+    padding-left: 0;
+}
+
+.members-list ul li {
+    list-style: none;
+    padding: 4px;
+}
