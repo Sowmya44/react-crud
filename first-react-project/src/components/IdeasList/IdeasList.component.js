@@ -13,7 +13,7 @@ class IdeasList extends Component {
         }
 
         response.json().then((ideasList) => {
-            console.log(ideasList);
+            this.setState({ ideas: ideasList });
         });
       }).catch((error) => {
         console.log('Error occurred', error);
