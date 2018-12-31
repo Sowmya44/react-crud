@@ -9,15 +9,26 @@ class CreateIdea extends Component {
     }
   
     handleSubmit(event) {
-      const newIdea = {
-          title: this.idea.title.value,
-          name: this.idea.name.value,
-          abstract: this.idea.abstract.value,
-          user_name: this.idea.user_name.value,
-          user_email: this.idea.user_email.value
-      };
-      alert('An idea was submitted:' + JSON.stringify(newIdea));
-      event.preventDefault();
+        const newIdea = {
+            title: this.idea.title.value,
+            name: this.idea.name.value,
+            abstract: this.idea.abstract.value,
+            user_name: this.idea.user_name.value,
+            user_email: this.idea.user_email.value
+        };
+        console.log('An idea was submitted:' + JSON.stringify(newIdea));
+        const url = 'http://localhost:3001/ideas';
+
+        fetch(url, {
+        method: 'POST', // or 'PUT'
+        body: JSON.stringify(newIdea), // data can be `string` or {object}!
+        headers:{
+            'Content-Type': 'application/json'
+        }
+        }).then(res => res.json())
+        .then(response => console.log('Success:', JSON.stringify(response)))
+        .catch(error => console.error('Error:', error));
+        event.preventDefault();
     }
   
     render() {

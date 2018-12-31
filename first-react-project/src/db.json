@@ -1,52 +1,60 @@
 {
-    "ideas": [
+  "ideas": [
+    {
+      "id": 1,
+      "name": "Idea1",
+      "abstract": "Hello this is my idea",
+      "members": [
         {
-            "id": 1,
-            "name": "Idea1",
-            "abstract": "Hello this is my idea",
-            "members": [
-                {
-                    "role": "leader",
-                    "name": "Rahat Khanna",
-                    "email": "rahat.khanna@apple.com"
-                }
-            ]
-        },
+          "role": "leader",
+          "name": "Rahat Khanna",
+          "email": "rahat.khanna@apple.com"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Idea2",
+      "abstract": "Hello this is my idea",
+      "members": [
         {
-          "id": 2,
-          "name": "Idea2",
-          "abstract": "Hello this is my idea",
-          "members": [
-              {
-                  "role": "leader",
-                  "name": "ABC",
-                  "email": "abc@apple.com"
-              }
-          ]
-      },
-      {
-          "id": 3,
-          "name": "Idea3",
-          "abstract": "Hello this is my idea",
-          "members": [
-              {
-                  "role": "leader",
-                  "name": "XYZ",
-                  "email": "xyz@apple.com"
-              }
-          ]
-      },
-      {
-        "id": 4,
-        "name": "Idea4",
-        "abstract": "New Idea on the go",
-        "members": [
-            {
-                "role": "leader",
-                "name": "MyName",
-                "email": "myname@apple.com"
-            }
-        ]
+          "role": "leader",
+          "name": "ABC",
+          "email": "abc@apple.com"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Idea3",
+      "abstract": "Hello this is my idea",
+      "members": [
+        {
+          "role": "leader",
+          "name": "XYZ",
+          "email": "xyz@apple.com"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Idea4",
+      "abstract": "New Idea on the go",
+      "members": [
+        {
+          "role": "leader",
+          "name": "MyName",
+          "email": "myname@apple.com"
+        }
+      ]
+    },
+    {
+      "title": "Test123",
+      "name": "CreateIdea Test",
+      "abstract": "Testing creation of idea using fetch POST API Call.",
+      "user_name": "Test Doe",
+      "user_email": "test@apple.com",
+      "id": 5
     }
-    ]
-  }
+  ]
+}
