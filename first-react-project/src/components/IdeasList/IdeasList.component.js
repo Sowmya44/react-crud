@@ -3,44 +3,25 @@ import './IdeasList.css';
 
 class IdeasList extends Component {
   state = {
-      ideas: [
-          {
-              id: 1,
-              name: 'Idea1',
-              abstract: 'Hello this is my idea',
-              members: [
-                  {
-                      role: 'leader',
-                      name: 'Rahat Khanna',
-                      email: 'rahat.khanna@apple.com'
-                  }
-              ]
-          },
-          {
-            id: 2,
-            name: 'Idea2',
-            abstract: 'Hello this is my idea',
-            members: [
-                {
-                    role: 'leader',
-                    name: 'ABC',
-                    email: 'abc@apple.com'
-                }
-            ]
-        },
-        {
-            id: 3,
-            name: 'Idea3',
-            abstract: 'Hello this is my idea',
-            members: [
-                {
-                    role: 'leader',
-                    name: 'XYZ',
-                    email: 'xyz@apple.com'
-                }
-            ]
+      ideas: []
+  }
+
+  getIdeasList() {
+      fetch("http://localhost:3001/ideas").then((response) => {
+        if (response.status !== 200) {
+            throw new Error('Looks like there was a problem. Status Code: ' + response.status);
         }
-      ]
+
+        response.json().then((ideasList) => {
+            this.setState({ ideas: ideasList });
+        });
+      }).catch((error) => {
+        console.log('Error occurred', error);
+      });
+  }
+
+  componentDidMount() {
+      this.getIdeasList();
   }
   
   render() {
