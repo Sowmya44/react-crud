@@ -1,0 +1,14 @@
+.create-form {
+    padding: 10px;
+    text-align: left;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.form-row {
+    padding: 10px;
+}
+
+.form-row input, .form-row textarea {
+    margin-left: 30px;
+}
